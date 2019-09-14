@@ -5,16 +5,25 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    [Header("Player")]
+    [Header("Movement")]
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 1f;
+
+    [Header("Life")]
     [SerializeField] int health = 1000;
+    [SerializeField] GameObject explosionVFX;
 
     [Header("Projectile")]
     [SerializeField] float projectileSpeed = 20f;
     [SerializeField] float projectileFiringPeriod = 0.1f;
-
     [SerializeField] GameObject laserPrefab;
+
+    [Header("Audio")]
+    [SerializeField] AudioClip deathAudio;
+    [SerializeField] [Range(0, 1)] float deathAudioVolume = 0.75f;
+    [SerializeField] AudioClip shootAudio;
+    [SerializeField] [Range(0, 1)] float shootAudioVolume = 0.2f;
+
 
     Coroutine firingCoroutine;
 
@@ -76,6 +85,7 @@ public class Player : MonoBehaviour
         {
             GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity) as GameObject;
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, projectileSpeed);
+            AudioSource.PlayClipAtPoint(shootAudio, Camera.main.transform.position, shootAudioVolume);
             yield return new WaitForSeconds(projectileFiringPeriod);
         }
     }
@@ -93,7 +103,15 @@ public class Player : MonoBehaviour
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        AudioSource.PlayClipAtPoint(deathAudio, Camera.main.transform.position, deathAudioVolume);
+        Destroy(gameObject);
+        GameObject explosion = Instantiate(explosionVFX, transform.position, transform.rotation);
+        Destroy(explosion, 1f);
     }
 }
