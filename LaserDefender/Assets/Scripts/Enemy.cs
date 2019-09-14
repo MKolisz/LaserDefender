@@ -27,7 +27,7 @@ public class Enemy : MonoBehaviour
     {
         shotCounter = Random.Range(minTimeBetweenShots, maxTimeBetweenShots);
     }
-
+        
     // Update is called once per frame
     void Update()
     {
