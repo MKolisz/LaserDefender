@@ -12,11 +12,10 @@ GameObject:
   - component: {fileID: 3262043505925317710}
   - component: {fileID: 1021046430201056534}
   - component: {fileID: 1042343571016558798}
-  - component: {fileID: 144804434558957547}
   - component: {fileID: 8398739680821659656}
   - component: {fileID: 9117722828700261640}
   m_Layer: 9
-  m_Name: Enemy2
+  m_Name: Big Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8816c3c084207e94e877bfa10a2c6fd0, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6506cda1760e3b14890b872b8baee64a, type: 3}
+  m_Color: {r: 0.2781736, g: 0, b: 0.9811321, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -108,63 +107,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49136d689820fbb43a9b7832937508fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  health: 1000
   explosionVFX: {fileID: 8449568446816283871, guid: ca1931626cb1c844e8d5f1c0aeb6346d,
     type: 3}
-  killScore: 100
+  killScore: 500
   shotCounter: 0
-  minTimeBetweenShots: 0.1
-  maxTimeBetweenShots: 0.3
-  laserPrefab: {fileID: 2981766253697125902, guid: 9f85b539cc17a0b45afbc791141584e9,
+  minTimeBetweenShots: 0.5
+  maxTimeBetweenShots: 1
+  laserPrefab: {fileID: 601788320466282649, guid: 629484c991e895047a29a65c083bbe30,
     type: 3}
   projectileSpeed: 15
   deathAudio: {fileID: 8300000, guid: 91d5e2ea0fcb6f543b2551faa7dc5154, type: 3}
   deathAudioVolume: 0.2
   shootAudio: {fileID: 8300000, guid: ecd5a4ce506b9f7468fbc98a0ef6e289, type: 3}
   shootAudioVolume: 0.1
---- !u!60 &144804434558957547
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2154686857352182461}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.03, y: 0.84}
-    newSize: {x: 1.03, y: 0.84}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.095, y: -0.34}
-      - {x: 0.10036837, y: -0.33144984}
-      - {x: 0.13331504, y: -0.23362464}
-      - {x: 0.30668494, y: -0.28289974}
-      - {x: 0.27668494, y: -0.40144977}
-      - {x: 0.38647333, y: -0.41536245}
-      - {x: 0.515, y: 0.02347562}
-      - {x: 0.24721003, y: 0.36072496}
-      - {x: 0.18057992, y: 0.36434957}
-      - {x: 0.079587795, y: 0.42946184}
-      - {x: -0.07794669, y: 0.42463747}
-      - {x: -0.16352667, y: 0.36289966}
-      - {x: -0.26110503, y: 0.3614499}
-      - {x: -0.5242633, y: 0.025074534}
-      - {x: -0.38110507, y: -0.42}
-      - {x: -0.28036836, y: -0.40608737}
-      - {x: -0.30594832, y: -0.28014913}
-      - {x: -0.13499999, y: -0.25}
 --- !u!50 &8398739680821659656
 Rigidbody2D:
   serializedVersion: 4

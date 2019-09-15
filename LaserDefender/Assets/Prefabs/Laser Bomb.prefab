@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 71658894486896132}
   - component: {fileID: 8171272190106143820}
   - component: {fileID: 2080059518172271314}
-  - component: {fileID: 6219018645053325626}
+  - component: {fileID: 514080264706826422}
+  - component: {fileID: 7744356516559400001}
   m_Layer: 11
-  m_Name: Enemy Laser2
+  m_Name: Laser Bomb
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71,8 +72,8 @@ SpriteRenderer:
   m_SortingLayerID: -1818687257
   m_SortingLayer: -1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 747b95242133219408bcf9a702825393, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 6d6de9891394a3c42a01c8eab8ff412b, type: 3}
+  m_Color: {r: 0.88848066, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -94,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bf7fc8809982904fa0116786b34404a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 100
+  damage: 200
 --- !u!50 &2080059518172271314
 Rigidbody2D:
   serializedVersion: 4
@@ -116,8 +117,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!70 &6219018645053325626
-CapsuleCollider2D:
+--- !u!58 &514080264706826422
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -129,6 +130,18 @@ CapsuleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.1625, y: 0.7125}
-  m_Direction: 0
+  m_Offset: {x: 0.0043439716, y: 0.0021750927}
+  serializedVersion: 2
+  m_Radius: 0.5038576
+--- !u!114 &7744356516559400001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 601788320466282649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25c5b764fd8dcb43a148be9477f5f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

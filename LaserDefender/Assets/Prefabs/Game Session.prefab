@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1508820102531360333
+--- !u!1 &7692484663536551348
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1508820102531360331}
-  - component: {fileID: 1508820102531360330}
+  - component: {fileID: 7692484663536551350}
+  - component: {fileID: 7692484663536551351}
   m_Layer: 0
-  m_Name: EnemySpawner
+  m_Name: Game Session
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1508820102531360331
+--- !u!4 &7692484663536551350
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508820102531360333}
+  m_GameObject: {fileID: 7692484663536551348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -31,22 +31,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1508820102531360330
+--- !u!114 &7692484663536551351
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508820102531360333}
+  m_GameObject: {fileID: 7692484663536551348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2169fdc2b15070243be88b29c2490a7b, type: 3}
+  m_Script: {fileID: 11500000, guid: 821da8242875b124b849b63cf1554978, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveConfigs:
-  - {fileID: 11400000, guid: 973e0deb283a9f143a8e3b0969194364, type: 2}
-  - {fileID: 11400000, guid: a6977a78255678342a8c38972d447159, type: 2}
-  - {fileID: 11400000, guid: 7eb604e0d2367fb4984252584d63b68e, type: 2}
-  - {fileID: 11400000, guid: 1b1d56ea8ab46c64b9133ad37e5917f3, type: 2}
-  startingWave: 0
-  looping: 1
